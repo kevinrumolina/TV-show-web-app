@@ -1,0 +1,23 @@
+.burgerline{
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    margin-bottom: 13px;
+    transform-origin: left;
+    transition: all 1s ease;
+}
+
+#burgermenu{ display: none; }
+#burgermenu:checked ~ label .top{
+    transform: rotate(45deg);
+    background-color: tomato;
+}
+#burgermenu:checked ~ label .medium{
+    background-color: white;
+}
+#burgermenu:checked ~ label .low{
+    transform: rotate(-45deg);
+    background-color: tomato;
+}
+
+
