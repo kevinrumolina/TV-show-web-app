@@ -39,10 +39,10 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/tv/:id">
+          <Route path={"/TV-show-web-app/tv/:id" || "/tv/:id"}>
             <Detail />
           </Route>
-          <Route path="/movie/:id">
+          <Route path={"/TV-show-web-app/movie/:id" || "/movie/:id"}>
             <Detail />
           </Route>
           <Route path="/">
