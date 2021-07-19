@@ -6,8 +6,6 @@ import {
 } from "react-router-dom";
 import { Film } from './components/Film';
 import { Detail } from './components/Detail';
-import { BackButton } from './components/BackButton';
-import { SimilarFilm } from './components/SimilarFilm';
 import './App.css';
 
 const sectionNames = ["tv shows", "movies"];
@@ -42,14 +40,10 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/tv/">
-            <BackButton />
             <Detail />
-            <SimilarFilm />
           </Route>
           <Route path="/movie/">
-            <BackButton />
             <Detail />
-            <SimilarFilm />
           </Route>
           <Route path="/">
           <header>

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { BackButton } from './BackButton';
+import { SimilarFilm } from './SimilarFilm';
 
 const apiUrl = 'https://api.themoviedb.org/3';
 const apiKey = 'a562a9a87fddcafca2a9c4dd28aaea99';
@@ -22,15 +24,19 @@ export const Detail = () => {
     }, [path, sectionFetcher])
 
     return (
-        <main className="film detail">
-            <img className={`film-image`} 
-                src={details.backdrop_path ?  `${imageUri}${details.backdrop_path}` : `${imagePoster}${details.poster_path}`}
-                alt={details.name || details.title} />
-            <div>
-                <h2 className="film-title">{details.name || details.title}</h2>
-                <p className="film-votes">{details.vote_average}</p>
+        <main >
+            <BackButton />
+            <div className="film detail">
+                <img className={`film-image`} 
+                    src={details.backdrop_path ?  `${imageUri}${details.backdrop_path}` : `${imagePoster}${details.poster_path}`}
+                    alt={details.name || details.title} />
+                <div>
+                    <h2 className="film-title">{details.name || details.title}</h2>
+                    <p className="film-votes">{details.vote_average}</p>
+                </div>
+                <p className="film-overview">{details.overview}</p>
             </div>
-            <p className="film-overview">{details.overview}</p>
+            <SimilarFilm />
         </main>
     )
 }
