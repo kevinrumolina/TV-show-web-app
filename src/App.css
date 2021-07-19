@@ -85,6 +85,9 @@ header{
   font-weight: 300;
   font-size: 1.3em;
 }
+.film.detail .film-title{
+  width: 60%;
+}
 .film-votes{
   position: relative;
   font-size: 1em;
